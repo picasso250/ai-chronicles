@@ -1,57 +1,57 @@
 export const milestones = [
   {
     year: "1950",
-    title: "The Turing Test",
-    description: "Alan Turing publishes 'Computing Machinery and Intelligence', proposing the imitation game as a measure of machine intelligence.",
+    title: "图灵测试",
+    description: "艾伦·图灵发表了《计算机器与智能》，提出了“模仿游戏”作为衡量机器智能的标准。",
     icon: "brain"
   },
   {
     year: "1956",
-    title: "Dartmouth Workshop",
-    description: "The term 'Artificial Intelligence' is coined during this summer workshop at Dartmouth College, marking the birth of AI as a field.",
+    title: "达特茅斯会议",
+    description: "在达特茅斯学院举行的夏季研讨会上，“人工智能”一词被正式提出，标志着人工智能领域的诞生。",
     icon: "users"
   },
   {
     year: "1997",
-    title: "Deep Blue Victory",
-    description: "IBM's Deep Blue becomes the first computer chess-playing system to win both a chess game and a chess match against a reigning world champion, Garry Kasparov.",
+    title: "深蓝的胜利",
+    description: "IBM的“深蓝”成为第一个在国际象棋比赛中击败现任世界冠军加里·卡斯帕罗夫的计算机系统。",
     icon: "trophy"
   },
   {
     year: "2012",
-    title: "The AlexNet Moment",
-    description: "AlexNet significantly outperforms competitors in the ImageNet Large Scale Visual Recognition Challenge, triggering the deep learning revolution.",
+    title: "AlexNet 时刻",
+    description: "AlexNet 在 ImageNet 大规模视觉识别挑战赛中表现显著优于竞争对手，引发了深度学习革命。",
     icon: "image"
   },
   {
     year: "2016",
-    title: "AlphaGo Beats Lee Sedol",
-    description: "DeepMind's AlphaGo defeats 18-time world champion Lee Sedol 4-1 in the game of Go, a feat previously thought to be decades away.",
+    title: "AlphaGo 击败李世石",
+    description: "DeepMind 的 AlphaGo 以 4-1 的比分击败了 18 届世界冠军李世石，这一壮举此前被认为还需要几十年才能实现。",
     icon: "target"
   },
   {
     year: "2017",
-    title: "Transformers: Attention Is All You Need",
-    description: "Google researchers publish the paper introducing the Transformer architecture, which would later power large language models like GPT.",
+    title: "Transformer：注意力就是你所需要的一切",
+    description: "Google 研究人员发表论文引入了 Transformer 架构，该架构后来为 GPT 等大型语言模型提供了核心支持。",
     icon: "zap"
   },
   {
     year: "2022",
-    title: "ChatGPT & Generative AI",
-    description: "OpenAI releases ChatGPT, bringing generative AI to the mainstream and demonstrating the power of large-scale pre-training.",
+    title: "ChatGPT 与生成式 AI",
+    description: "OpenAI 发布 ChatGPT，将生成式 AI 推向主流，并展示了大模型预训练的强大威力。",
     icon: "message-square"
   },
   {
     year: "2024",
-    title: "Reasoning Models Emerge",
-    description: "Models like GPT-4o and Claude 3.5 Sonnet push the boundaries of multimodal reasoning and creative coding assistance.",
+    title: "推理模型涌现",
+    description: "GPT-4o 和 Claude 3.5 Sonnet 等模型在多模态推理和创意编程辅助方面不断突破边界。",
     icon: "cpu"
   },
   {
-    year: "Feb 2026",
-    title: "Shock! Shock!",
-    description: "Prof. Donald Knuth publishes a paper titled 'Claude's Cycles' after Claude Opus 4.6 solves a graph decomposition conjecture from TAOCP that he'd worked on for weeks.",
-    details: "Knuth's paper begins with 'Shock! Shock!' and notes that Claude found the solution in 31 explorations (~1 hour). He famously stated: 'It seems I'll have to revise my opinions about generative AI one of these days.'",
+    year: "2026年2月",
+    title: "震惊！震惊！",
+    description: "唐纳德·克努斯 (Donald Knuth) 教授发表了题为《克劳德的循环》(Claude's Cycles) 的论文。此前，Claude Opus 4.6 解决了他在《计算机程序设计艺术》(TAOCP) 中研究了数周的一个图分解猜想。",
+    details: "克努斯的论文以“震惊！震惊！”开头，并指出 Claude 仅用了 31 次探索（约 1 小时）就找到了答案。他留下了一句名言：“看来我总有一天得修正我对‘生成式 AI’的看法了。”",
     icon: "star",
     highlight: true
   }

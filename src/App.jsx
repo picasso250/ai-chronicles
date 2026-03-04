@@ -18,8 +18,8 @@ function App() {
   return (
     <div className="container">
       <header className="header">
-        <h1>AI Chronicles</h1>
-        <p className="subtitle">The Journey from Imitation to Discovery</p>
+        <h1>AI 大事记</h1>
+        <p className="subtitle">从模仿到发现的跨时空旅程</p>
       </header>
 
       <div className="timeline">
