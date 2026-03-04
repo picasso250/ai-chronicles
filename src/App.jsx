@@ -1,6 +1,7 @@
 import React from 'react';
 import { Brain, Users, Trophy, Image, Target, Zap, MessageSquare, Cpu, Star } from 'lucide-react';
 import { milestones } from './data';
+import './App.css';
 
 const IconMap = {
   brain: Brain,
@@ -16,10 +17,10 @@ const IconMap = {
 
 function App() {
   return (
-    <div className="container">
+    <div className="app-wrapper">
       <header className="header">
-        <h1>AI 大事记</h1>
-        <p className="subtitle">从模仿到发现的跨时空旅程</p>
+        <h1>AI 纪元</h1>
+        <p>探索机器智能的演进轨迹</p>
       </header>
 
       <div className="timeline">
@@ -28,18 +29,18 @@ function App() {
           return (
             <div 
               key={index} 
-              className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'} ${item.highlight ? 'highlighted' : ''}`}
+              className={`node ${item.highlight ? 'highlighted' : ''}`}
             >
-              <div className="timeline-content">
-                <div className="year-badge">{item.year}</div>
-                <div className="content-inner">
-                  <div className="icon-wrapper">
-                    <Icon size={24} />
-                  </div>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  {item.details && <div className="details">{item.details}</div>}
+              <div className="glass-card">
+                <div className="node-header">
+                  <span className="year">{item.year}</span>
+                  <h3 className="title">
+                    <Icon size={18} className="icon" />
+                    {item.title}
+                  </h3>
                 </div>
+                <p className="desc">{item.description}</p>
+                {item.details && <div className="details">{item.details}</div>}
               </div>
             </div>
           );
