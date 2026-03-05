@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { Brain, Users, Trophy, Image, Target, Zap, MessageSquare, Cpu, Star, ChevronUp, ChevronDown } from 'lucide-react';
-import { milestones } from './data';
+import { Brain, Users, Trophy, Image, Target, Zap, MessageSquare, Cpu, Star, Terminal, ChevronUp, ChevronDown } from 'lucide-react';
+import { milestones as originalMilestones } from './data';
 import './App.css';
+
+const milestones = [...originalMilestones].reverse();
 
 const IconMap = {
   brain: Brain,
@@ -12,12 +14,14 @@ const IconMap = {
   zap: Zap,
   'message-square': MessageSquare,
   cpu: Cpu,
-  star: Star
+  star: Star,
+  terminal: Terminal
 };
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const isScrolling = useRef(false);
+  const touchStartY = useRef(0);
 
   const handleNext = useCallback(() => {
     setActiveIndex((prev) => Math.min(prev + 1, milestones.length - 1));
@@ -55,12 +59,34 @@ function App() {
       }
     };
 
+    const handleTouchStart = (e) => {
+      touchStartY.current = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e) => {
+      const touchEndY = e.changedTouches[0].clientY;
+      const deltaY = touchStartY.current - touchEndY;
+
+      // 阈值判断，防止轻微抖动触发
+      if (Math.abs(deltaY) > 50) {
+        if (deltaY > 0) {
+          handleNext();
+        } else {
+          handlePrev();
+        }
+      }
+    };
+
     window.addEventListener('wheel', handleWheel);
     window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('touchstart', handleTouchStart);
+    window.addEventListener('touchend', handleTouchEnd);
 
     return () => {
       window.removeEventListener('wheel', handleWheel);
       window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchend', handleTouchEnd);
     };
   }, [handleNext, handlePrev]);
 
