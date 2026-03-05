@@ -89,17 +89,13 @@ body {
 
 /* Future cards (stacked downwards) */
 .card-wrapper.future {
-  opacity: 1;
+  opacity: calc(1 - var(--abs-offset) * 0.25);
   pointer-events: auto;
   cursor: pointer;
   /* translate down, scale down, and push back in Z */
   transform: translateY(calc(var(--abs-offset) * 45px)) 
              scale(calc(1 - var(--abs-offset) * 0.05)) 
              translateZ(calc(var(--abs-offset) * -80px));
-}
-
-.card-wrapper.future .glass-card {
-  filter: brightness(calc(1 - var(--abs-offset) * 0.15));
 }
 
 /* Future hover effect */
